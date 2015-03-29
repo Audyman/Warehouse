@@ -1,0 +1,43 @@
+﻿@using Warehouse.WebApp.AppCode
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - WareHouse</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render(BundleConfig.JqueryScripts)
+    @Scripts.Render(BundleConfig.BootstrapScripts)
+    @Scripts.Render(BundleConfig.KnockoutScripts)
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    <div class="container body-content clearfix wrapper">
+
+        <script type="text/javascript">
+
+            $(function () {
+                $("input[type = 'radio']").click(function () {
+                    $(this).parents("form").submit();
+                });
+            });
+        </script>
+
+        <div class="choose-language-box">
+            @Html.Partial(Url.Content("~/Views/PartialViews/CooseLanguagePartial.cshtml"))
+        </div>
+
+        <div class="main-logo">
+            @Html.ActionLink(SiteConstants.SiteTitle, NameHelper.Home.Index, NameHelper.Home.Controller)
+        </div>
+
+        @RenderBody()
+    </div>
+    <footer class="footer">
+        <hr />
+        <p>&copy; @DateTime.Now.Year - Independent Alternative Systems Inc.</p>
+    </footer>
+</body>
+</html>

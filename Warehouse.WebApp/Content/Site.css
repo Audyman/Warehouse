@@ -1,0 +1,341 @@
+﻿
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Tangerine', serif;
+    font-size: 1em;
+}
+
+body {
+    min-height: 600px;
+    -moz-min-width: 600px;
+    -ms-min-width: 600px;
+    -o-min-width: 600px;
+    -webkit-min-width: 600px;
+    min-width: 600px;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: -5em auto -4em;
+    min-width: 550px;
+}
+
+footer.footer hr {
+    margin-top: 5em;
+}
+
+body {
+    -moz-user-select: none;
+    background: url("images/background-noise.png") repeat scroll 0 0 #292b30;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+label > input { /* HIDE RADIO */
+    display: none;
+}
+
+    label > input + img { /* IMAGE STYLES */
+        cursor: pointer;
+        border: 2px solid transparent;
+        width: 35px;
+        z-index: 1000;
+    }
+
+        label > input + img:active { /* IMAGE STYLES */
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -ms-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        }
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* CLEAR FIX*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* End hide from IE-mac */
+
+footer {
+    -moz-min-width: 500px;
+    -ms-min-width: 500px;
+    -o-min-width: 500px;
+    -webkit-min-width: 500px;
+    min-width: 500px;
+    width: 85%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.main-logo {
+    position: fixed;
+    top: 0;
+    -webkit-user-select: none; /* Chrome all / Safari all */
+    -moz-user-select: none; /* Firefox all */
+    -ms-user-select: none; /* IE 10+ */
+    /* No support for these yet, use at own risk */
+    -o-user-select: none;
+    user-select: none;
+}
+
+    .main-logo a, .main-logo a:hover, .main-logo a:active, .main-logo a:visited {
+        -ms-text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+        text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+        font-size: 7em;
+        color: #000000;
+        text-decoration: none;
+    }
+
+.choose-language-box {
+    position: fixed;
+    top: 5em;
+    right: 15em;
+}
+
+@media screen and (max-width: 950px) {
+    .choose-language-box {
+        position: fixed;
+        top: 10em;
+        right: 30%;
+    }
+}
+
+/*LogIn Page - Begin*/
+.login-box {
+    height: 300px;
+    width: 500px;
+    margin: 0 auto;
+    -ms-opacity: 0.65;
+    opacity: 0.65;
+    margin-top: 20em;
+}
+
+.box-radius-15 {
+    -ms-border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
+    border: 0px solid #000000;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -ms-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.margin-center {
+    margin: 0 auto;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.login_form {
+    top: 20%;
+}
+
+    .login_form input[type=text], .login_form input[type=password] {
+        background-color: #242424;
+        color: rgb(255, 255, 255);
+    }
+
+.login-lable {
+    padding: 25px;
+    text-align: center;
+    font-size: 2em;
+    -ms-text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+}
+
+.signin-btn-box {
+    margin-top: 30px;
+}
+
+/*LogIn Page - End*/
+
+/*Validation - Begin*/
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.custom-validation-error {
+    text-align: center;
+    font: 1.7em 'playregular',sans-serif;
+    border: none;
+    padding: .1em .3em;
+    line-height: 1;
+}
+
+.field-validation-error {
+    color: #F34848;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+/*Validation - End*/
+
+/*Catalog - Begin*/
+.side-menu-box {
+    margin-top: 15em;
+    width: 200px;
+    padding: 15px;
+    float: left;
+}
+
+    .side-menu-box ul li a {
+        -ms-text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+        text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+        color: #000000;
+        font-weight: 600;
+        font-size: 1.1em;
+    }
+
+.catalog-body {
+    background-color: #ffffff;
+    bottom: 13%;
+    float: right;
+    left: 35%;
+    margin-top: 15em;
+    min-height: 200px;
+    opacity: 0.6;
+    position: absolute;
+    right: 1em;
+    top: -2%;
+    width: 60%;
+    overflow: auto;
+}
+
+.catalog-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+/*table - begin*/
+
+body {
+    margin-top: 20px;
+}
+
+table {
+    background: #F8F8F8;
+    color: #5a5959;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    line-height: 1;
+    position: relative;
+    width: 600px;
+}
+
+
+
+    table:not(.table-header) tr:hover td:first-child:before {
+        content: '';
+        position: absolute;
+        left: 0px;
+        margin-top: -10px;
+        height: 31px;
+        width: 100%;
+        border: 1px solid #47a9e1;
+        box-shadow: 0 0 4px #47a9e1;
+        pointer-events: none;
+    }
+
+    table:not(.table-header) tr:hover {
+        background: #d1e9f7;
+    }
+
+    table tr {
+        border: 1px solid #999;
+    }
+
+    table td, table th {
+        padding: 10px;
+    }
+
+.table-header {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/*table - end*/
+
+@media screen and (max-width: 600px) {
+    .side-menu-box {
+        margin-top: 13em;
+        width: auto;
+        padding: 15px;
+    }
+
+    .nav-stacked > li {
+        float: left;
+    }
+
+    .catalog-body {
+        bottom: 12%;
+        left: 1em;
+        min-height: 200px;
+        -moz-min-width: 400px;
+        -ms-min-width: 400px;
+        -o-min-width: 400px;
+        -webkit-min-width: 400px;
+        min-width: 400px;
+        top: 0;
+        width: 80%;
+    }
+
+    .catalog-table {
+        font-size: 0.8em;
+    }
+
+    .choose-language-box {
+        left: 400px;
+        top: 150px;
+    }
+}
+
+/*Catalog - End*/

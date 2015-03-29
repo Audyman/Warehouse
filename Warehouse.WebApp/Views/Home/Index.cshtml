@@ -1,0 +1,29 @@
+﻿@using Warehouse.Resources
+@using Warehouse.WebApp.AppCode
+@model Warehouse.ViewModel.Users.LoginViewModel
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="login-box box-radius-15 box-shadow">
+    <div class="login_form">
+        <div class="login-lable">
+            @Resources.LogIn
+        </div>
+        @using (Html.BeginForm(NameHelper.Home.Index, NameHelper.Home.Controller, FormMethod.Post))
+        {
+            <p class="align-center">
+                @Html.ValidationMessageFor(m => m.Login)
+                @Html.TextBoxFor(m => m.Login, new { placeholder = Resources.Username, tabindex = "1", @class = "form-control margin-center" })
+            </p>
+            <p class="align-center">
+                @Html.ValidationMessageFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { placeholder = Resources.Password, tabindex = "2", @class = "form-control margin-center" })
+            </p>
+            <p class="align-center signin-btn-box">
+                <input type="submit" name="login_btn" tabindex="4" value="@Resources.SignIn" class="btn btn-primary margin-center" />
+            </p>
+        }
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿@using System.Threading
+@using Warehouse.Resources
+@using Warehouse.WebApp.AppCode
+
+@{
+    var culture = Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+}
+
+@helper Selected(string c, string culture)
+{
+    if (c != culture)
+    {
+        return;
+    }
+    @:checked="checked"
+}
+
+@using (Html.BeginForm(NameHelper.Home.SetCulture, NameHelper.Home.Controller))
+{
+    <fieldset>
+        <label for="ru-ru">
+            <input name="culture" id="ru-ru" value="ru-ru" type="radio" @Selected("ru-ru", culture) />
+            <img src="@Url.Content("~/content/images/ru.png")" alt="ru" class="box-radius-15" />
+        </label>
+        <label for="en-us">
+            <input name="culture" id="en-us" value="en-us" type="radio" @Selected("en-us", culture) />
+            <img src="@Url.Content("~/content/images/uk.png")" alt="ru" class="box-radius-15" />
+        </label>
+    </fieldset>
+}

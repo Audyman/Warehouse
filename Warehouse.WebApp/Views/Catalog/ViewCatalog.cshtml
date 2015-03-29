@@ -1,0 +1,73 @@
+﻿@using Warehouse.WebApp.AppCode
+@{
+    ViewBag.Title = "ViewCatalog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts {
+    @Scripts.Render(BundleConfig.TeamPageScripts)
+}
+
+<script type="text/javascript">
+    var catalogModel;
+
+    $(function () {
+        catalogModel = initCatalogViewModel();
+        var container = document.getElementById('catalogContainer');
+
+        function initCatalogViewModel() {
+            var options = {
+                getCatalogUrl: '@Url.Action(NameHelper.Catalog.GetCatalog, NameHelper.Catalog.Controller)'
+            };
+
+            return new Product(options);
+        };
+
+        ko.applyBindings(catalogModel, container);
+        catalogModel.loadProducts();
+    });
+</script>
+
+
+
+<div class="side-menu-box box-radius-15 box-shadow" id="catalogContainer">
+
+    <ul class="nav nav-pills nav-stacked">
+        <li role="presentation"><a href="#">Ovens</a></li>
+        <li role="presentation"><a href="#">Stones</a></li>
+        <li role="presentation"><a href="#">Accessories</a></li>
+        <li role="presentation"><a href="#">Others</a></li>
+        @*<li role="presentation"><input type="button" value="Test" data-bind="click: $root.loadProducts" cv /></li>*@
+    </ul>
+
+    <div class="catalog-body box-radius-15">
+        <fieldset>
+            <table class="catalog-table table-header">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Sale Number</th>
+                        <th>Total Number</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+            </table>
+            <div>
+                <table class="catalog-table">
+                    <tbody data-bind="foreach: ProductModel.ProductsList">
+                        <tr>
+                            <th data-bind="text:Name"></th>
+                            <th data-bind="text:Description"></th>
+                            <th data-bind="text:Type"></th>
+                            <th data-bind="text:SaleNumber"></th>
+                            <th data-bind="text:TotalNumber"></th>
+                            <th data-bind="text:Price"></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </fieldset>
+    </div>
+</div>
