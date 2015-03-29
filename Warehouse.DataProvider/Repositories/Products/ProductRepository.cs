@@ -4,7 +4,6 @@ using System.Linq;
 using System.Linq.Expressions;
 using Warehouse.DataProvider.Database;
 using Warehouse.Model.Entities;
-using Warehouse.Model.Enums;
 
 namespace Warehouse.DataProvider.Repositories.Products
 {
@@ -24,7 +23,7 @@ namespace Warehouse.DataProvider.Repositories.Products
 
         public IEnumerable<Product> GetByType(ProductType type)
         {
-            return DbSet.Where(e => e.Type == type).ToList();
+            return DbSet.Where(e => e.ProductType == type).ToList();
         }
 
         public IEnumerable<Product> GetAllProducts()

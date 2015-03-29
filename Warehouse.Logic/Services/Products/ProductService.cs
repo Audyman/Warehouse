@@ -28,7 +28,7 @@ namespace Warehouse.Logic.Services.Products
             {
                 Name = item.Name,
                 Description = item.Description,
-                Type = item.Type.ToString(),
+                Type = item.ProductType.Name,
                 SaleNumber = item.SaleNumber,
                 TotalNumber = item.TotalNumber,
                 Price = item.Price

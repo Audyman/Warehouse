@@ -1,6 +1,5 @@
 ﻿using Warehouse.DataProvider.Database;
 using Warehouse.Model.Entities;
-using Warehouse.Model.Enums;
 
 namespace Warehouse.Database.Initializer
 {
@@ -21,7 +20,16 @@ namespace Warehouse.Database.Initializer
                 Description = "Good Tube",
                 SaleNumber = 5,
                 TotalNumber = 7,
-                Type = ProductType.StainlessSteelChimney,
+                ProductType = new ProductType
+                              {
+                                  IsDeleted = false,
+                                  Name = "Test Type 1",
+                                  ProductGroup = new ProductGroup
+                                                 {
+                                                     IsDeleted = false,
+                                                     Name = "Test Group 1"
+                                                 }
+                              },
                 IsDeleted = false,
                 Price = 28
             });
