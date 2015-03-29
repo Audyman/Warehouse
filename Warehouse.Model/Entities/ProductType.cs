@@ -3,11 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Warehouse.Model.Entities
 {
-    public class ProductType : BaseEntity
+    public class ProductType : BaseProduct
     {
-        public string Name { get; set; }
-        public bool IsDeleted { get; set; }
-
         public int ProductGroupId { get; set; }
 
         [ForeignKey("ProductGroupId")]

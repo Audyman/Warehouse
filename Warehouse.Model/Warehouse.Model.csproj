@@ -57,7 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\Base\BaseEntity.cs" />
+    <Compile Include="Entities\Base\BaseProduct.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ProductGroup.cs" />
     <Compile Include="Entities\ProductType.cs" />
