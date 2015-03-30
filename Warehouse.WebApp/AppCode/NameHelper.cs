@@ -56,6 +56,28 @@ namespace Warehouse.WebApp.AppCode
 
         #endregion
 
+        #region Admin
+
+        public static class Admin
+        {
+            public static string Controller
+            {
+                get { return GetController<AdminController>(); }
+            }
+
+            public static string Index
+            {
+                get { return GetAction<AdminController>(e => e.Index()); }
+            }
+
+            public static string AddItems
+            {
+                get { return GetAction<AdminController>(e => e.AddItems()); }
+            }
+        }
+
+        #endregion
+
         #region Private Methods
 
         private static string GetAction<TController>(Expression<Func<TController, object>> action)
