@@ -4,13 +4,11 @@ namespace Warehouse.ViewModel.Users
 {
     public class LoginViewModel
     {
-        public LoginViewModel() { }
-
-        [Required(ErrorMessage = "Required.")]
+        [Required(ErrorMessageResourceType = typeof(Resources.Resources), ErrorMessageResourceName = "ErrorMessageRequired")]
         [MaxLength(100)]
         public string Login { get; set; }
 
-        [Required(ErrorMessage = "Required.")]
+        [Required(ErrorMessageResourceType = typeof(Resources.Resources), ErrorMessageResourceName = "ErrorMessageRequired")]
         public string Password { get; set; }
     }
 }

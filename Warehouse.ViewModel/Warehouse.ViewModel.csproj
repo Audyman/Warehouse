@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Products\ProductGroupViewModel.cs" />
     <Compile Include="Products\ProductViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users\LoginViewModel.cs" />
@@ -64,6 +65,12 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Warehouse.Resources\Warehouse.Resources.csproj">
+      <Project>{a5baf46d-e7d2-4b03-98e7-af72a18502b7}</Project>
+      <Name>Warehouse.Resources</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

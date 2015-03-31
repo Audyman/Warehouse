@@ -1,8 +1,13 @@
-﻿
+﻿@model Warehouse.ViewModel.Products.ProductGroupViewModel
+
 @{
     ViewBag.Title = "AddItems";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>AddItems</h2>
-
+<div class="admin-form-conteiner box-radius-15">
+    <div class="admin-form-item">
+        @Html.TextBoxFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+</div>

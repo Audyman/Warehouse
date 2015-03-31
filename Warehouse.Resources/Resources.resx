@@ -132,4 +132,7 @@
   <data name="Username" xml:space="preserve">
     <value>Имя пользователя</value>
   </data>
+    <data name="ErrorMessageRequired" xml:space="preserve">
+    <value>Обязательно для заполнения.</value>
+  </data>
 </root>

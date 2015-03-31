@@ -120,6 +120,9 @@
   <data name="ChooseYourLanguage" xml:space="preserve">
     <value>Choose Your Language</value>
   </data>
+  <data name="ErrorMessageRequired" xml:space="preserve">
+    <value>Required.</value>
+  </data>
   <data name="LogIn" xml:space="preserve">
     <value>Log In</value>
   </data>
