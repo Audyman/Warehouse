@@ -132,7 +132,13 @@
   <data name="Username" xml:space="preserve">
     <value>Имя пользователя</value>
   </data>
-    <data name="ErrorMessageRequired" xml:space="preserve">
+  <data name="ErrorMessageRequired" xml:space="preserve">
     <value>Обязательно для заполнения.</value>
+  </data>
+  <data name="AddNewProductGroup" xml:space="preserve">
+    <value>Добавить новую группу товаров</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>Название группы</value>
   </data>
 </root>

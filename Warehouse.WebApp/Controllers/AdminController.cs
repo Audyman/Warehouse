@@ -1,9 +1,11 @@
 ﻿using System.Web.Mvc;
+using Warehouse.ViewModel.Products;
 using Warehouse.WebApp.AppCode;
+using Warehouse.WebApp.AppCode.Base;
 
 namespace Warehouse.WebApp.Controllers
 {
-    public class AdminController : Controller
+    public class AdminController : BaseController
     {
         [HttpGet]
         public ActionResult Index()
@@ -18,7 +20,7 @@ namespace Warehouse.WebApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddItems(int? id)
+        public ActionResult AddGroup(ProductGroupViewModel model)
         {
             return RedirectToAction(NameHelper.Admin.Index, NameHelper.Admin.Controller);
         }

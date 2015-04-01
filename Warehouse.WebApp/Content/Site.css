@@ -109,6 +109,14 @@ footer {
     text-align: center;
 }
 
+.float-left {
+    float: left
+}
+
+.float-right {
+    float: right
+}
+
 .main-logo {
     position: fixed;
     top: 0;
@@ -344,20 +352,41 @@ table {
 /*Admin - Begin*/
 
 .admin-form-conteiner {
-    background-color: #FFFFFF;
-    margin: 20em auto 0;
-    min-height: 300px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20em;
+    min-height: 200px;
     opacity: 0.6;
-    width: 100%;
+    width: 400px;
+    padding: 10px;
 }
 
+    .admin-form-conteiner legend {
+        text-align: center;
+        color: #337ab7;
+        font-weight: 600;
+        text-shadow: 0 0 3px #000000;
+        text-shadow: 0 0 1px rgba(0, 0, 0, 1);
+    }
+
 .admin-form-item {
+    margin: 20px;
+}
+
+.admin-form-item-left {
     float: left;
 }
 
-    .admin-form-item input[type=text] {
-        background-color: #242424;
-        color: rgb(255, 255, 255);
-    }
+.admin-form-item-center {
+    margin: 0 auto;
+    min-width: 100px;
+    text-align: center;
+    width: 200px;
+}
+
+.admin-form-item-left input[type=text] {
+    background-color: #242424;
+    color: rgb(255, 255, 255);
+    font-size: 1.3em;
+}
 
 /*Admin - End*/

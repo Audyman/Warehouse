@@ -1,13 +1,37 @@
-﻿@model Warehouse.ViewModel.Products.ProductGroupViewModel
+﻿@using Warehouse.Resources
+@using Warehouse.WebApp.AppCode
+@model Warehouse.ViewModel.Products.ProductGroupViewModel
 
 @{
     ViewBag.Title = "AddItems";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<div class="admin-form-conteiner box-radius-15">
-    <div class="admin-form-item">
-        @Html.TextBoxFor(m => m.Name)
-        @Html.ValidationMessageFor(m => m.Name)
+<div id="AddGroupContainer">
+    <div class="admin-form-conteiner box-radius-15 box-shadow float-left">
+        <fieldset>
+            <legend>@Resources.AddNewProductGroup</legend>
+
+            @using (Ajax.BeginForm(NameHelper.Admin.AddGroup, NameHelper.Admin.Controller, new AjaxOptions()
+            {
+
+            }))
+            {
+                <div class="admin-form-item admin-form-item-left">
+                    @Html.TextBoxFor(m => m.Name, new { placeholder = Resources.GroupName })
+                    @Html.ValidationMessageFor(m => m.Name)
+                </div>
+                <div class="admin-form-item admin-form-item-center">
+                    <input type="button" value="Add group" class="btn-primary" />
+                </div>
+            }
+
+        </fieldset>
+    </div>
+
+    <div class="admin-form-conteiner box-radius-15 box-shadow float-right">
+        <fieldset>
+            <legend>@Resources.AddNewProductGroup</legend>
+        </fieldset>
     </div>
 </div>

@@ -74,6 +74,11 @@ namespace Warehouse.WebApp.AppCode
             {
                 get { return GetAction<AdminController>(e => e.AddItems()); }
             }
+
+            public static string AddGroup
+            {
+                get { return GetAction<AdminController>(e => e.AddGroup(null)); }
+            }
         }
 
         #endregion

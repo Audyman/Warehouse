@@ -61,6 +61,15 @@ namespace Warehouse.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Добавить новую группу товаров.
+        /// </summary>
+        public static string AddNewProductGroup {
+            get {
+                return ResourceManager.GetString("AddNewProductGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Выберите Свой Язык.
         /// </summary>
         public static string ChooseYourLanguage {
@@ -75,6 +84,15 @@ namespace Warehouse.Resources {
         public static string ErrorMessageRequired {
             get {
                 return ResourceManager.GetString("ErrorMessageRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Название группы.
+        /// </summary>
+        public static string GroupName {
+            get {
+                return ResourceManager.GetString("GroupName", resourceCulture);
             }
         }
         

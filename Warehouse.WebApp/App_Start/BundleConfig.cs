@@ -15,7 +15,8 @@ namespace Warehouse.WebApp
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle(JqueryScripts).Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/jquery.unobtrusive-ajax.min.js"));
 
             bundles.Add(new ScriptBundle(JqueryValScripts).Include(
                         "~/Scripts/jquery.validate*"));
