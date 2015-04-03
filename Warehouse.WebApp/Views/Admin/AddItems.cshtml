@@ -14,7 +14,8 @@
 
             @using (Ajax.BeginForm(NameHelper.Admin.AddGroup, NameHelper.Admin.Controller, new AjaxOptions()
             {
-
+                HttpMethod = "POST",
+                OnSuccess = ""
             }))
             {
                 <div class="admin-form-item admin-form-item-left">
@@ -22,7 +23,7 @@
                     @Html.ValidationMessageFor(m => m.Name)
                 </div>
                 <div class="admin-form-item admin-form-item-center">
-                    <input type="button" value="Add group" class="btn-primary" />
+                    <input type="submit" value=@Resources.AddGroup class="btn-primary" />
                 </div>
             }
 
@@ -31,7 +32,8 @@
 
     <div class="admin-form-conteiner box-radius-15 box-shadow float-right">
         <fieldset>
-            <legend>@Resources.AddNewProductGroup</legend>
+            <legend>@Resources.ExistingGroups</legend>
         </fieldset>
+        <div></div>
     </div>
 </div>

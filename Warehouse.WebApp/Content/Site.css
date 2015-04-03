@@ -364,8 +364,6 @@ table {
         text-align: center;
         color: #337ab7;
         font-weight: 600;
-        text-shadow: 0 0 3px #000000;
-        text-shadow: 0 0 1px rgba(0, 0, 0, 1);
     }
 
 .admin-form-item {

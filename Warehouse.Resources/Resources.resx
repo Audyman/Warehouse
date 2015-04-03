@@ -141,4 +141,10 @@
   <data name="GroupName" xml:space="preserve">
     <value>Название группы</value>
   </data>
+  <data name="AddGroup" xml:space="preserve">
+    <value>Добавить группу</value>
+  </data>
+  <data name="ExistingGroups" xml:space="preserve">
+    <value>Существующие группы</value>
+  </data>
 </root>
