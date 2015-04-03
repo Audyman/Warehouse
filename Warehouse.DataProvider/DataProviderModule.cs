@@ -11,6 +11,7 @@ namespace Warehouse.DataProvider
             builder.Register(x => new DatabaseFactory()).As<IDatabaseFactory>().InstancePerRequest();
             builder.RegisterType<CommitProvider>().As<ICommitProvider>().InstancePerRequest();
             builder.RegisterType<ProductRepository>().As<IProductRepository>().InstancePerRequest();
+            builder.RegisterType<ProductGroupRepository>().As<IProductGroupRepository>().InstancePerRequest();
 
             base.Load(builder);
         }

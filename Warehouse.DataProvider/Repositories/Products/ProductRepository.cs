@@ -23,7 +23,7 @@ namespace Warehouse.DataProvider.Repositories.Products
 
         public IEnumerable<Product> GetByType(ProductType type)
         {
-            return DbSet.Where(e => e.ProductType == type).ToList();
+            return DbSet.Where(e => e.ProductType == type && !e.IsDeleted).ToList();
         }
 
         public IEnumerable<Product> GetAllProducts()
@@ -33,7 +33,7 @@ namespace Warehouse.DataProvider.Repositories.Products
 
         public IEnumerable<Product> GetByName(string name)
         {
-            return DbSet.Where(e => e.Name.Contains(name)).ToList();
+            return DbSet.Where(e => e.Name.Contains(name) && !e.IsDeleted).ToList();
         }
     }
 
