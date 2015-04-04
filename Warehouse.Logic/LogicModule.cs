@@ -1,6 +1,5 @@
 ﻿using Autofac;
 using AutoMapper;
-using Warehouse.Logic.ModelMappers;
 using Warehouse.Logic.Services.Products;
 
 namespace Warehouse.Logic
@@ -11,15 +10,9 @@ namespace Warehouse.Logic
         {
             builder.RegisterType<ProductService>().As<IProductService>().InstancePerRequest();
             builder.RegisterType<ProductGroupService>().As<IProductGroupService>().InstancePerRequest();
+            builder.Register<IMappingEngine>(x => Mapper.Engine).SingleInstance();
 
             base.Load(builder);
-        }
-
-        internal void InitAutoMapper(ContainerBuilder builder)
-        {
-            Mapper.Initialize(cfg => cfg.AddProfile<ProductViewModelProfile>());
-            builder.Register<IMappingEngine>(x => Mapper.Engine)
-            .SingleInstance();
         }
     }
 }

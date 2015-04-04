@@ -8,6 +8,7 @@ using Autofac.Features.ResolveAnything;
 using Autofac.Integration.Mvc;
 using Warehouse.DataProvider;
 using Warehouse.Logic;
+using Warehouse.Logic.ModelMappers.Base;
 using Warehouse.ViewModel.Users;
 using Warehouse.WebApp.Controllers;
 
@@ -46,8 +47,8 @@ namespace Warehouse.WebApp
             builder.RegisterModule(new DataProviderModule());
             builder.RegisterModule(new LogicModule());
 
- //           builder.RegisterSource(new AnyConcreteTypeNotAlreadyRegisteredSource(
- //t => !(t.IsGenericType && t.GetGenericTypeDefinition() == typeof(Meta<>))));
+            //           builder.RegisterSource(new AnyConcreteTypeNotAlreadyRegisteredSource(
+            //t => !(t.IsGenericType && t.GetGenericTypeDefinition() == typeof(Meta<>))));
 
             var container = builder.Build();
             // Set MVC DI resolver to use our Autofac container
@@ -57,6 +58,9 @@ namespace Warehouse.WebApp
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // AutoMapper Initialization
+            AutoMapperInitializer.InitAutoMapper();
         }
     }
 }

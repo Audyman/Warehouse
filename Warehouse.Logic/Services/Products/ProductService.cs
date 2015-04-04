@@ -28,8 +28,9 @@ namespace Warehouse.Logic.Services.Products
         public IEnumerable<ProductViewModel> GetAllProducts()
         {
             var products = _productRepository.GetAllProducts();
+            var model = products.Select(item => _mapper.Map<Product, ProductViewModel>(item)).ToList();
 
-            return products.Select(item => _mapper.Map<Product, ProductViewModel>(item)).ToList();
+            return model;
         }
 
         public IEnumerable<ProductViewModel> GetNonSaleProducts()

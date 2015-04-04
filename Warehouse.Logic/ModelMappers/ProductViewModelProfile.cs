@@ -11,7 +11,7 @@ namespace Warehouse.Logic.ModelMappers
             CreateMap<Product, ProductViewModel>()
                 .ForMember(x => x.Name, opt => opt.MapFrom(s => s.Name))
                 .ForMember(x => x.Description, opt => opt.MapFrom(s => s.Description))
-                .ForMember(x => x.Type, opt => opt.MapFrom(s => s.ProductType))
+                .ForMember(x => x.Type, opt => opt.MapFrom(s => s.ProductType.Name))
                 .ForMember(x => x.TotalNumber, opt => opt.MapFrom(s => s.TotalNumber))
                 .ForMember(x => x.SaleNumber, opt => opt.MapFrom(s => s.SaleNumber))
                 .ForMember(x => x.Price, opt => opt.MapFrom(s => s.Price));
