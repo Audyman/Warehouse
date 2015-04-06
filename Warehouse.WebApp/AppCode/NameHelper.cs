@@ -83,6 +83,28 @@ namespace Warehouse.WebApp.AppCode
 
         #endregion
 
+        #region SignUp
+
+        public static class SignUp
+        {
+            public static string Controller
+            {
+                get { return GetController<SignUpController>(); }
+            }
+
+            public static string Index
+            {
+                get { return GetAction<SignUpController>(e => e.Index()); }
+            }
+
+            public static string CreateNewUser
+            {
+                get { return GetAction<SignUpController>(e => e.CreateNewUser(null)); }
+            }
+        }
+
+        #endregion
+
         #region Private Methods
 
         private static string GetAction<TController>(Expression<Func<TController, object>> action)

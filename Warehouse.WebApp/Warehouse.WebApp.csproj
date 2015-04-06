@@ -141,6 +141,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SignUpController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -204,6 +205,7 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\AddItems.cshtml" />
+    <Content Include="Views\SignUp\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -225,6 +227,10 @@
     <ProjectReference Include="..\Warehouse.Model\Warehouse.Model.csproj">
       <Project>{fb025b98-b7fb-4578-90a3-7f42351e8d17}</Project>
       <Name>Warehouse.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.Providers\Warehouse.Providers.csproj">
+      <Project>{eb2177b8-e83f-4b44-8fcc-e3c0cd70f857}</Project>
+      <Name>Warehouse.Providers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Warehouse.Resources\Warehouse.Resources.csproj">
       <Project>{a5baf46d-e7d2-4b03-98e7-af72a18502b7}</Project>
