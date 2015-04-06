@@ -8,7 +8,7 @@ using Warehouse.Model.Entities;
 namespace Warehouse.DataProvider.Database
 {
     [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
-    public class WarehouseContext : DbContext, IWarehouseContext
+    public class WarehouseContext : MySqlMembershipContext, IWarehouseContext
     {
         public DbSet<ProductGroup> ProductGroups { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }

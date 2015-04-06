@@ -64,6 +64,7 @@
     <Compile Include="Database\IDatabaseContext.cs" />
     <Compile Include="Database\IDatabaseFactory.cs" />
     <Compile Include="Database\IWarehouseContext.cs" />
+    <Compile Include="Database\MySqlMembershipContext.cs" />
     <Compile Include="Database\WarehouseContext.cs" />
     <Compile Include="DataProviderModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
