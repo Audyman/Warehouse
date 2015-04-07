@@ -1,5 +1,7 @@
-﻿using Warehouse.DataProvider.Database;
+﻿using Warehouse.Database.Configuration;
+using Warehouse.DataProvider.Database;
 using Warehouse.Model.Entities;
+using Warehouse.Providers.Security;
 
 namespace Warehouse.Database.Initializer
 {
@@ -7,7 +9,12 @@ namespace Warehouse.Database.Initializer
     {
         protected override void AddSystemData(WarehouseContext context)
         {
-            //SystemData.AddTestData(context);
+            const string playerRoleName = "Standartuser";
+            const string administratorRoleName = "Administrator";
+
+            MySqlWebSecurity.InitializeDatabaseConnection(DbConfigManager.ConnectionName);
+            System.Web.Security.Roles.CreateRole(administratorRoleName);
+            System.Web.Security.Roles.CreateRole(playerRoleName);
         }
 
         protected override void AddTestData(WarehouseContext context)

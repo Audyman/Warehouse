@@ -10,5 +10,7 @@ namespace Warehouse.ViewModel.Users
 
         [Required(ErrorMessageResourceType = typeof(Resources.Resources), ErrorMessageResourceName = "ErrorMessageRequired")]
         public string Password { get; set; }
+
+        public bool RememberMe { get; set; }
     }
 }

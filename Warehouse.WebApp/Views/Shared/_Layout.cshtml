@@ -24,7 +24,9 @@
                 });
             });
         </script>
-
+        <div class="log-out">
+            @Html.ActionLink("Log Out", NameHelper.LogOut.LogoutUser, NameHelper.LogOut.Controller)
+        </div>
         <div class="choose-language-box">
             @Html.Partial(Url.Content("~/Views/PartialViews/CooseLanguagePartial.cshtml"))
         </div>

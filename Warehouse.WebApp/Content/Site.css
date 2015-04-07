@@ -109,12 +109,18 @@ footer {
     text-align: center;
 }
 
+.log-out {
+    margin-top: 5em;
+    position: absolute;
+    right: 2em;
+}
+
 .float-left {
-    float: left
+    float: left;
 }
 
 .float-right {
-    float: right
+    float: right;
 }
 
 .main-logo {
@@ -148,6 +154,22 @@ footer {
         top: 10em;
         right: 30%;
     }
+}
+
+.box-shadow-middle {
+    -webkit-box-shadow: 0 0 18px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 0 18px 1px rgba(0,0,0,0.75);
+    box-shadow: 0 0 18px 1px rgba(0,0,0,0.75);
+}
+
+.box-shadow-large {
+    -webkit-box-shadow: 0 0 18px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 0 18px 9px rgba(0,0,0,0.75);
+    box-shadow: 0 0 18px 9px rgba(0,0,0,0.75);
+}
+
+fieldset legend {
+    font-weight: 600;
 }
 
 /*LogIn Page - Begin*/
@@ -388,3 +410,67 @@ table {
 }
 
 /*Admin - End*/
+
+/*SignUp - Begin*/
+
+.signup-conteiner {
+    margin-top: 15em;
+    background-color: #ffffff;
+    opacity: .6;
+    padding: 20px;
+}
+
+.required-field {
+    color: #D45252;
+}
+
+.fl-left {
+    float: left;
+}
+
+.fl-right {
+    float: right;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.agreement {
+    margin-top: 10px;
+}
+
+.signup_btn {
+    text-align: right;
+    margin-top: 10px;
+}
+
+input[type="submit"], input[type="button"] {
+    height: 2em;
+    background-color: #706965;
+    color: #fff;
+    border: 1px solid rgba(0,0,0,.16);
+    border-radius: 5px;
+    min-width: 6em;
+    font-size: 1.1em;
+}
+
+    input[type="submit"]:hover, input[type="button"]:hover {
+        -webkit-box-shadow: inset 0 0 61px 0 rgba(29,116,187,.58);
+        -moz-box-shadow: inset 0 0 61px 0 rgba(29,116,187,.58);
+        box-shadow: inset 0 0 61px 0 rgba(29,116,187,.58);
+        -webkit-text-shadow: 1px 1px 2px rgba(29,116,187,.58);
+        text-shadow: 1px 1px 2px rgba(29,116,187,.58);
+    }
+
+    .cancel, input[type="button"].cancel {
+        margin-right: 15px;
+        background-color: #E0DCDC !important;
+        color: #000 !important;
+    }
+
+/*SignUp - End*/

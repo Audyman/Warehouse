@@ -147,4 +147,10 @@
   <data name="ExistingGroups" xml:space="preserve">
     <value>Существующие группы</value>
   </data>
+  <data name="SignUpTitle" xml:space="preserve">
+    <value>Создать нового пользователя</value>
+  </data>
+  <data name="ModelStateInvalidUserDataKey" xml:space="preserve">
+    <value>Неверное имя пользователя или пароль. Попробуйте еще раз.</value>
+  </data>
 </root>

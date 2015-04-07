@@ -124,6 +124,15 @@ namespace Warehouse.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Неверное имя пользователя или пароль. Попробуйте еще раз..
+        /// </summary>
+        public static string ModelStateInvalidUserDataKey {
+            get {
+                return ResourceManager.GetString("ModelStateInvalidUserDataKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Пароль.
         /// </summary>
         public static string Password {
@@ -138,6 +147,15 @@ namespace Warehouse.Resources {
         public static string SignIn {
             get {
                 return ResourceManager.GetString("SignIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Создать нового пользователя.
+        /// </summary>
+        public static string SignUpTitle {
+            get {
+                return ResourceManager.GetString("SignUpTitle", resourceCulture);
             }
         }
         

@@ -2,6 +2,7 @@
 using System.Linq.Expressions;
 using System.Web.Mvc;
 using Warehouse.WebApp.Controllers;
+using Warehouse.WebApp.Controllers.Common;
 
 namespace Warehouse.WebApp.AppCode
 {
@@ -100,6 +101,28 @@ namespace Warehouse.WebApp.AppCode
             public static string CreateNewUser
             {
                 get { return GetAction<SignUpController>(e => e.CreateNewUser(null)); }
+            }
+        }
+
+        #endregion
+
+        #region LogOut
+
+        public static class LogOut
+        {
+            public static string Controller
+            {
+                get { return GetController<LogOutController>(); }
+            }
+
+            public static string Index
+            {
+                get { return GetAction<LogOutController>(e => e.Index()); }
+            }
+
+            public static string LogoutUser
+            {
+                get { return GetAction<LogOutController>(e => e.LogoutUser()); }
             }
         }
 

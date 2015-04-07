@@ -54,6 +54,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -79,6 +80,10 @@
     <ProjectReference Include="..\Warehouse.Model\Warehouse.Model.csproj">
       <Project>{fb025b98-b7fb-4578-90a3-7f42351e8d17}</Project>
       <Name>Warehouse.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.Providers\Warehouse.Providers.csproj">
+      <Project>{eb2177b8-e83f-4b44-8fcc-e3c0cd70f857}</Project>
+      <Name>Warehouse.Providers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

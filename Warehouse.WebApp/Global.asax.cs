@@ -7,9 +7,12 @@ using Autofac.Features.Metadata;
 using Autofac.Features.ResolveAnything;
 using Autofac.Integration.Mvc;
 using Warehouse.DataProvider;
+using Warehouse.DataProvider.Database;
 using Warehouse.Logic;
 using Warehouse.Logic.ModelMappers.Base;
+using Warehouse.Providers.Security;
 using Warehouse.ViewModel.Users;
+using Warehouse.WebApp.AppCode;
 using Warehouse.WebApp.Controllers;
 
 namespace Warehouse.WebApp
@@ -61,6 +64,8 @@ namespace Warehouse.WebApp
 
             // AutoMapper Initialization
             AutoMapperInitializer.InitAutoMapper();
+
+            MySqlWebSecurity.InitializeDatabaseConnection("WarehouseContext");
         }
     }
 }

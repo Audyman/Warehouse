@@ -138,11 +138,17 @@
   <data name="LogIn" xml:space="preserve">
     <value>Log In</value>
   </data>
+  <data name="ModelStateInvalidUserDataKey" xml:space="preserve">
+    <value>Incorrect username or password. Try again.</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
   <data name="SignIn" xml:space="preserve">
     <value>Sign In</value>
+  </data>
+  <data name="SignUpTitle" xml:space="preserve">
+    <value>Create new account</value>
   </data>
   <data name="Username" xml:space="preserve">
     <value>Username</value>

@@ -6,7 +6,11 @@ namespace Warehouse.Logic.ModelMappers.Base
     {
         public static void InitAutoMapper()
         {
-            Mapper.Initialize(cfg => cfg.AddProfile<ProductViewModelProfile>());
+            Mapper.Initialize(x =>
+            {
+                x.AddProfile<ProductViewModelProfile>();
+                x.AddProfile<SignUpViewModelProfile>();
+            });
         }
     }
 }

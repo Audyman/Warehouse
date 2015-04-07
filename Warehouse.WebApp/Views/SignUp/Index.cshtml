@@ -1,4 +1,5 @@
-﻿@using Warehouse.WebApp.AppCode
+﻿@using Warehouse.Resources
+@using Warehouse.WebApp.AppCode
 @model Warehouse.ViewModel.Users.SignUpViewModel
 
 
@@ -7,32 +8,94 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div style="margin-top: 20em;">
+<div class="signup-conteiner box-shadow-large box-radius-15">
+    <fieldset>
+        <legend>@Resources.SignUpTitle</legend>
+    </fieldset>
 
     @using (Html.BeginForm(NameHelper.SignUp.CreateNewUser, NameHelper.SignUp.Controller, FormMethod.Post))
     {
-        <div>
-            @Html.TextBoxFor(m => m.UserName)
-        </div>
-        <div>
-            @Html.TextBoxFor(m => m.FirstName)
-        </div>
-        <div>
-            @Html.TextBoxFor(m => m.LastName)
-        </div>
-        <div>
-            @Html.TextBoxFor(m => m.Email)
-        </div>
-        <div>
-            @Html.TextBoxFor(m => m.Password, new { @type = "password" })
-        </div>
-        <div>
-            @Html.TextBoxFor(m => m.RepeatPassword, new { @type = "password" })
-        </div>
-
-        <div>
-            <input type="submit" value="Create" />
-        </div>
+        <fieldset>
+            <dl class="clearfix">
+                <dt class="fl-left clearfix">
+                    <label>
+                        Your username<span class="required-field">*</span>:
+                    </label>
+                </dt>
+                <dd class="fl-left clearfix">
+                    @Html.TextBoxFor(m => m.UserName, new { @tabindex = "1", @type = "text", @autofocus = "" })
+                    @Html.ValidationMessageFor(m => m.UserName)
+                </dd>
+            </dl>
+            <dl class="clearfix">
+                <dt class="fl-left clearfix">
+                    <label>
+                        Your password<span class="required-field">*</span>:
+                    </label>
+                </dt>
+                <dd class="fl-left clearfix">
+                    @Html.TextBoxFor(m => m.Password, new { @tabindex = "2", @type = "password" })
+                    @Html.ValidationMessageFor(m => m.Password)
+                </dd>
+            </dl>
+            <dl class="clearfix">
+                <dt class="fl-left clearfix">
+                    <label>
+                        Repeat password<span class="required-field">*</span>:
+                    </label>
+                </dt>
+                <dd class="fl-left clearfix">
+                    @Html.TextBoxFor(m => m.RepeatPassword, new { @tabindex = "3", @type = "password" })
+                    @Html.ValidationMessageFor(m => m.RepeatPassword)
+                </dd>
+            </dl>
+            <dl class="clearfix">
+                <dt class="fl-left clearfix">
+                    <label>
+                        Email<span class="required-field">*</span>:
+                    </label>
+                </dt>
+                <dd class="fl-left clearfix">
+                    @Html.TextBoxFor(m => m.Email, new { @tabindex = "4" })
+                    @Html.ValidationMessageFor(m => m.Email)
+                    <span class="form_hint">Proper format "somename@gmail.com"</span>
+                </dd>
+            </dl>
+            <dl class="fl-left clearfix">
+                <dt class="fl-left clearfix">
+                    <label>
+                        First name<span class="required-field">*</span>:
+                    </label>
+                </dt>
+                <dd class="fl-left clearfix">
+                    @Html.TextBoxFor(m => m.FirstName, new { @tabindex = "5", @type = "text" })
+                    @Html.ValidationMessageFor(m => m.FirstName)
+                </dd>
+            </dl>
+            <dl class="fl-left clearfix">
+                <dt class="fl-left clearfix">
+                    <label>
+                        Last name<span class="required-field">*</span>:
+                    </label>
+                </dt>
+                <dd class="fl-left clearfix">
+                    @Html.TextBoxFor(m => m.LastName, new { @tabindex = "6", @type = "text" })
+                    @Html.ValidationMessageFor(m => m.LastName)
+                </dd>
+            </dl>
+        </fieldset>
+        <fieldset>
+            <p class="agreement clearfix">
+                @Html.CheckBoxFor(m => m.IsAgreementChecked, new { data_tooltip_placement = "top", @tabindex = "7" })
+                @Html.LabelFor(m => m.IsAgreementChecked, "Please check this box to indicate your agreement to our")
+                <a href="#" tabindex="14" id="termsLink">terms and conditions</a>.
+                @Html.ValidationMessageFor(m => m.IsAgreementChecked)
+            </p>
+            <p class="signup_btn clearfix">
+                <input type="submit" name="signUpBtn" value="Sign Up" tabindex="8" class="fl-right btn-primary" />
+                <input type="button" id="cancelBtn" name="cancelBtn" value="Cancel" tabindex="9" class="cancel fl-right" />
+            </p>
+        </fieldset>
     }
 
 </div>

@@ -24,5 +24,10 @@ namespace Warehouse.ViewModel.Users
 
         [Required]
         public string RepeatPassword { get; set; }
+
+        [Required]
+        public bool IsAgreementChecked { get; set; }
+
+        public bool IsAdmin { get; set; }
     }
 }

@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,14 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="LogicModule.cs" />
     <Compile Include="ModelMappers\Base\AutoMapperInitializer.cs" />
     <Compile Include="ModelMappers\ProductViewModelProfile.cs" />
+    <Compile Include="ModelMappers\SignUpViewModelProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Products\IProductGroupService.cs" />
     <Compile Include="Services\Products\IProductService.cs" />
     <Compile Include="Services\Products\ProductGroupService.cs" />
     <Compile Include="Services\Products\ProductService.cs" />
+    <Compile Include="Services\Users\ISignUpService.cs" />
+    <Compile Include="Services\Users\SignUpService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Warehouse.DataProvider\Warehouse.DataProvider.csproj">
@@ -65,6 +70,10 @@
     <ProjectReference Include="..\Warehouse.Model\Warehouse.Model.csproj">
       <Project>{fb025b98-b7fb-4578-90a3-7f42351e8d17}</Project>
       <Name>Warehouse.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.Providers\Warehouse.Providers.csproj">
+      <Project>{eb2177b8-e83f-4b44-8fcc-e3c0cd70f857}</Project>
+      <Name>Warehouse.Providers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Warehouse.ViewModel\Warehouse.ViewModel.csproj">
       <Project>{5b59f9e9-d6fd-4ba1-9441-d64a3f08a19c}</Project>
