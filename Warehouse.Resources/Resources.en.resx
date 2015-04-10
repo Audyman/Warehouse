@@ -126,6 +126,12 @@
   <data name="ChooseYourLanguage" xml:space="preserve">
     <value>Choose Your Language</value>
   </data>
+  <data name="ErrorMessageMaxLength100" xml:space="preserve">
+    <value>The maximum length of the field - 100 characters</value>
+  </data>
+  <data name="ErrorMessageMaxLengthDescription" xml:space="preserve">
+    <value>The maximum length of the field - 1000 characters</value>
+  </data>
   <data name="ErrorMessageRequired" xml:space="preserve">
     <value>Required.</value>
   </data>
@@ -137,6 +143,9 @@
   </data>
   <data name="LogIn" xml:space="preserve">
     <value>Log In</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Log Out</value>
   </data>
   <data name="ModelStateInvalidUserDataKey" xml:space="preserve">
     <value>Incorrect username or password. Try again.</value>

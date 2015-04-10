@@ -4,6 +4,7 @@ using Warehouse.WebApp.AppCode.Base;
 
 namespace Warehouse.WebApp.Controllers
 {
+    [Authorize]
     public class CatalogController : BaseController
     {
         private readonly IProductService _productService;

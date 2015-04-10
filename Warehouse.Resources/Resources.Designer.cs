@@ -88,6 +88,24 @@ namespace Warehouse.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Максимальная длина поля - 100 символов.
+        /// </summary>
+        public static string ErrorMessageMaxLength100 {
+            get {
+                return ResourceManager.GetString("ErrorMessageMaxLength100", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Максимальная длина поля - 1000 символов.
+        /// </summary>
+        public static string ErrorMessageMaxLengthDescription {
+            get {
+                return ResourceManager.GetString("ErrorMessageMaxLengthDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Обязательно для заполнения..
         /// </summary>
         public static string ErrorMessageRequired {
@@ -120,6 +138,15 @@ namespace Warehouse.Resources {
         public static string LogIn {
             get {
                 return ResourceManager.GetString("LogIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выйти.
+        /// </summary>
+        public static string LogOut {
+            get {
+                return ResourceManager.GetString("LogOut", resourceCulture);
             }
         }
         

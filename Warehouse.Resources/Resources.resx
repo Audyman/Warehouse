@@ -153,4 +153,13 @@
   <data name="ModelStateInvalidUserDataKey" xml:space="preserve">
     <value>Неверное имя пользователя или пароль. Попробуйте еще раз.</value>
   </data>
+  <data name="ErrorMessageMaxLength100" xml:space="preserve">
+    <value>Максимальная длина поля - 100 символов</value>
+  </data>
+  <data name="ErrorMessageMaxLengthDescription" xml:space="preserve">
+    <value>Максимальная длина поля - 1000 символов</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
 </root>

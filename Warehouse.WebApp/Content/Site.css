@@ -125,7 +125,7 @@ footer {
 
 .main-logo {
     position: fixed;
-    top: 0;
+    top: 2.3em;
     -webkit-user-select: none; /* Chrome all / Safari all */
     -moz-user-select: none; /* Firefox all */
     -ms-user-select: none; /* IE 10+ */
@@ -137,7 +137,7 @@ footer {
     .main-logo a, .main-logo a:hover, .main-logo a:active, .main-logo a:visited {
         -ms-text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
         text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
-        font-size: 7em;
+        font-size: 5em;
         color: #000000;
         text-decoration: none;
     }
