@@ -7,6 +7,7 @@ using Warehouse.WebApp.AppCode.Base;
 
 namespace Warehouse.WebApp.Controllers
 {
+    [AllowAnonymous]
     public class SignUpController : BaseController
     {
         private readonly ISignUpService _signUpService;
@@ -25,7 +26,7 @@ namespace Warehouse.WebApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult CreateNewUser(SignUpViewModel viewModel)
+        public ActionResult Index(SignUpViewModel viewModel)
         {
             if (!ModelState.IsValid || !viewModel.IsAgreementChecked) return View("Index", viewModel);
 

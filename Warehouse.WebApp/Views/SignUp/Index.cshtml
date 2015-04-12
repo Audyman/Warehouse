@@ -4,7 +4,7 @@
 
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = Resources.SignUpPage;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -13,13 +13,13 @@
         <legend>@Resources.SignUpTitle</legend>
     </fieldset>
 
-    @using (Html.BeginForm(NameHelper.SignUp.CreateNewUser, NameHelper.SignUp.Controller, FormMethod.Post))
+    @using (Html.BeginForm(NameHelper.SignUp.Index, NameHelper.SignUp.Controller, FormMethod.Post))
     {
         <fieldset>
             <dl class="clearfix">
                 <dt class="fl-left clearfix">
                     <label>
-                        Your username<span class="required-field">*</span>:
+                        @Resources.UsernameField<span class="required-field">*</span>:
                     </label>
                 </dt>
                 <dd class="fl-left clearfix">
@@ -30,7 +30,7 @@
             <dl class="clearfix">
                 <dt class="fl-left clearfix">
                     <label>
-                        Your password<span class="required-field">*</span>:
+                        @Resources.PasswordField<span class="required-field">*</span>:
                     </label>
                 </dt>
                 <dd class="fl-left clearfix">
@@ -41,7 +41,7 @@
             <dl class="clearfix">
                 <dt class="fl-left clearfix">
                     <label>
-                        Repeat password<span class="required-field">*</span>:
+                        @Resources.RepeatPasswordField<span class="required-field">*</span>:
                     </label>
                 </dt>
                 <dd class="fl-left clearfix">
@@ -52,7 +52,7 @@
             <dl class="clearfix">
                 <dt class="fl-left clearfix">
                     <label>
-                        Email<span class="required-field">*</span>:
+                        @Resources.EmailField<span class="required-field">*</span>:
                     </label>
                 </dt>
                 <dd class="fl-left clearfix">
@@ -64,7 +64,7 @@
             <dl class="fl-left clearfix">
                 <dt class="fl-left clearfix">
                     <label>
-                        First name<span class="required-field">*</span>:
+                        @Resources.FirstNameField<span class="required-field">*</span>:
                     </label>
                 </dt>
                 <dd class="fl-left clearfix">
@@ -75,7 +75,7 @@
             <dl class="fl-left clearfix">
                 <dt class="fl-left clearfix">
                     <label>
-                        Last name<span class="required-field">*</span>:
+                        @Resources.LastNameField<span class="required-field">*</span>:
                     </label>
                 </dt>
                 <dd class="fl-left clearfix">
@@ -87,8 +87,8 @@
         <fieldset>
             <p class="agreement clearfix">
                 @Html.CheckBoxFor(m => m.IsAgreementChecked, new { data_tooltip_placement = "top", @tabindex = "7" })
-                @Html.LabelFor(m => m.IsAgreementChecked, "Please check this box to indicate your agreement to our")
-                <a href="#" tabindex="14" id="termsLink">terms and conditions</a>.
+                @Html.LabelFor(m => m.IsAgreementChecked, Resources.AgreementText)
+                <a href="#" tabindex="14" id="termsLink">@Resources.AgreementLinkText</a>.
                 @Html.ValidationMessageFor(m => m.IsAgreementChecked)
             </p>
             <p class="signup_btn clearfix">

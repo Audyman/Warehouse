@@ -151,7 +151,7 @@ footer {
 @media screen and (max-width: 950px) {
     .choose-language-box {
         position: fixed;
-        top: 10em;
+        top: 8em;
         right: 30%;
     }
 }
@@ -176,10 +176,9 @@ fieldset legend {
 .login-box {
     height: 300px;
     width: 500px;
-    margin: 0 auto;
+    margin: 15px auto;
     -ms-opacity: 0.65;
     opacity: 0.65;
-    margin-top: 20em;
 }
 
 .box-radius-15 {
@@ -224,6 +223,13 @@ fieldset legend {
 
 .signin-btn-box {
     margin-top: 30px;
+}
+
+.create-new-account-conteiner {
+    height: 15px;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 18em;
 }
 
 /*LogIn Page - End*/
@@ -364,7 +370,7 @@ table {
 
     .choose-language-box {
         left: 400px;
-        top: 150px;
+        top: 65px;
     }
 }
 
@@ -420,6 +426,14 @@ table {
     padding: 20px;
 }
 
+    .signup-conteiner input[type=text], .signup-conteiner input[type=password] {
+        background-color: #242424;
+        color: rgb(255, 255, 255);
+        font-size: 1.3em;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
 .required-field {
     color: #D45252;
 }
@@ -444,6 +458,10 @@ table {
     margin-top: 10px;
 }
 
+    .agreement a {
+        font-weight: 600;
+    }
+
 .signup_btn {
     text-align: right;
     margin-top: 10px;
@@ -451,7 +469,6 @@ table {
 
 input[type="submit"], input[type="button"] {
     height: 2em;
-    background-color: #706965;
     color: #fff;
     border: 1px solid rgba(0,0,0,.16);
     border-radius: 5px;

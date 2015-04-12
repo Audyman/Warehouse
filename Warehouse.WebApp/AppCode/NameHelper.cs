@@ -97,11 +97,6 @@ namespace Warehouse.WebApp.AppCode
             {
                 get { return GetAction<SignUpController>(e => e.Index()); }
             }
-
-            public static string CreateNewUser
-            {
-                get { return GetAction<SignUpController>(e => e.CreateNewUser(null)); }
-            }
         }
 
         #endregion

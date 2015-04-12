@@ -3,9 +3,13 @@
 @model Warehouse.ViewModel.Users.LoginViewModel
 
 @{
-    ViewBag.Title = "Home";
+    ViewBag.Title = Resources.HomePage;
 }
 
+<div class="create-new-account-conteiner">
+    @Html.ActionLink(Resources.RegisterNewAccount, NameHelper.SignUp.Index, NameHelper.SignUp.Controller, null, new { @class = "fl-left", @tabindex = "4" })
+    @Html.ActionLink(Resources.ForgotPassword, NameHelper.Home.Index, NameHelper.Home.Controller, null, new { @class = "fl-right", @tabindex = "5" })
+</div>
 <div class="login-box box-radius-15 box-shadow">
     <div class="login_form">
         <div class="login-lable">
@@ -22,7 +26,7 @@
                 @Html.PasswordFor(m => m.Password, new { placeholder = Resources.Password, tabindex = "2", @class = "form-control margin-center" })
             </p>
             <p class="align-center signin-btn-box">
-                <input type="submit" name="login_btn" tabindex="4" value="@Resources.SignIn" class="btn btn-primary margin-center" />
+                <input type="submit" name="login_btn" tabindex="3" value="@Resources.SignIn" class="btn btn-primary margin-center" />
             </p>
         }
     </div>

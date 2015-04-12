@@ -123,8 +123,17 @@
   <data name="AddNewProductGroup" xml:space="preserve">
     <value>Add new products group</value>
   </data>
+  <data name="AgreementLinkText" xml:space="preserve">
+    <value>terms and conditions</value>
+  </data>
+  <data name="AgreementText" xml:space="preserve">
+    <value>Please check this box to indicate your agreement to our</value>
+  </data>
   <data name="ChooseYourLanguage" xml:space="preserve">
     <value>Choose Your Language</value>
+  </data>
+  <data name="EmailField" xml:space="preserve">
+    <value>Email</value>
   </data>
   <data name="ErrorMessageMaxLength100" xml:space="preserve">
     <value>The maximum length of the field - 100 characters</value>
@@ -138,8 +147,20 @@
   <data name="ExistingGroups" xml:space="preserve">
     <value>Existing groups</value>
   </data>
+  <data name="FirstNameField" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Forgot password?</value>
+  </data>
   <data name="GroupName" xml:space="preserve">
     <value>Group name</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="LastNameField" xml:space="preserve">
+    <value>Last name</value>
   </data>
   <data name="LogIn" xml:space="preserve">
     <value>Log In</value>
@@ -153,13 +174,28 @@
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="PasswordField" xml:space="preserve">
+    <value>Your password</value>
+  </data>
+  <data name="RegisterNewAccount" xml:space="preserve">
+    <value>Register new account</value>
+  </data>
+  <data name="RepeatPasswordField" xml:space="preserve">
+    <value>Repeat password</value>
+  </data>
   <data name="SignIn" xml:space="preserve">
     <value>Sign In</value>
+  </data>
+  <data name="SignUpPage" xml:space="preserve">
+    <value>Registration</value>
   </data>
   <data name="SignUpTitle" xml:space="preserve">
     <value>Create new account</value>
   </data>
   <data name="Username" xml:space="preserve">
     <value>Username</value>
+  </data>
+  <data name="UsernameField" xml:space="preserve">
+    <value>Your username</value>
   </data>
 </root>
